@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EWRZXMT960"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -146,6 +146,66 @@
                     <li><i class="fas fa-plus-circle"></i> Bonus: Python Programming</li>
                 </ul>
             </div>
+            <div class="chapter">
+                <h3><i class="fas fa-brain"></i> Course 5: EEG And Medical Time Series Analysis</h3>
+                <ul>
+                    <li><i class="fas fa- "></i> Coming soon</li>
+                </ul>
+            </div>
+            <div class="chapter">
+                <h3><i class="fas fa-brain"></i> Course 6: Medical Image Analysis</h3>
+                <ul>
+                    <li><i class="fas fa- "></i> Coming soon</li>
+                </ul>
+            </div>
+            <div class="chapter">
+                <h3><i class="fas fa-brain"></i> Course 7: Clinical Research Methodology</h3>
+                <ul>
+                    <li><i class="fas fa- "></i> Coming soon</li>
+                </ul>
+            </div>
+            <div class="chapter">
+                <h3><i class="fas fa-brain"></i> Course 8: Scientific Writing</h3>
+                <ul>
+                    <li><i class="fas fa- "></i> Coming soon</li>
+                </ul>
+            </div>
+            <div class="chapter">
+                <h3><i class="fas fa-brain"></i> Course 9: Study Protocol and Fund Proposal</h3>
+                <ul>
+                    <li><i class="fas fa- "></i> Coming soon</li>
+                </ul>
+            </div>
+            <div class="chapter">
+                <h3><i class="fas fa-brain"></i> Course 10: Meta-Analysis</h3>
+                <ul>
+                    <li><i class="fas fa- "></i> Coming soon</li>
+                </ul>
+            </div>
+            <div class="chapter">
+                <h3><i class="fas fa-brain"></i> Course 11: Computational Neuroscience</h3>
+                <ul>
+                    <li><i class="fas fa- "></i> Coming soon</li>
+                </ul>
+            </div>
+            <div class="chapter">
+                <h3><i class="fas fa-brain"></i> Course 12: Computational Medicine</h3>
+                <ul>
+                    <li><i class="fas fa- "></i> Coming soon</li>
+                </ul>
+            </div>
+            <div class="chapter">
+                <h3><i class="fas fa-brain"></i> Course 12: Bayesian Statistics </h3>
+                <ul>
+                    <li><i class="fas fa- "></i> Coming soon</li>
+                </ul>
+            </div>
+            <div class="chapter">
+                <h3><i class="fas fa-brain"></i> Course 12: Mathematics for Medical Ressearch</h3>
+                <ul>
+                    <li><i class="fas fa- "></i> Coming soon</li>
+                </ul>
+            </div>
         </section>
 
         <section id="instructor" class="instructor">
@@ -238,6 +298,38 @@
                     </div>
                 </div>
             </div>
+
+            <div id="admin-login" class="admin-login">
+                <button id="admin-login-btn">Admin Login</button>
+                <div id="admin-login-form" class="hidden">
+                    <input type="password" id="admin-password" placeholder="Admin Password">
+                    <button id="admin-submit">Login</button>
+                </div>
+            </div>
+        
+            <div id="testimonials" class="section testimonials">
+                <h2>What Our Students Say</h2>
+                <div class="testimonial-grid" id="testimonial-grid">
+                    <!-- Testimonials will be dynamically added here -->
+                </div>
+                <div class="testimonial-form">
+                    <h3>Share Your Experience</h3>
+                    <form id="testimonial-form">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <textarea id="review" name="review" placeholder="Your Review" required></textarea>
+                        <select id="rating" name="rating" required>
+                            <option value="">Select Rating</option>
+                            <option value="5">5 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="2">2 Stars</option>
+                            <option value="1">1 Star</option>
+                        </select>
+                        <button type="submit">Submit Review</button>
+                    </form>
+                </div>
+            </div>
+
         </section>
 
         <section id="contact" class="social-media">
@@ -257,5 +349,86 @@
     <footer>
         <p>&copy; 2024 Statistical Analysis and Machine Learning Methods. All rights reserved.</p>
     </footer>
+
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('testimonial-form');
+            const testimonialGrid = document.getElementById('testimonial-grid');
+            const adminLoginBtn = document.getElementById('admin-login-btn');
+            const adminLoginForm = document.getElementById('admin-login-form');
+            const adminSubmit = document.getElementById('admin-submit');
+            const adminPassword = document.getElementById('admin-password');
+            let isAdminLoggedIn = false;
+
+            // Admin login functionality
+            adminLoginBtn.addEventListener('click', function() {
+                adminLoginForm.classList.toggle('hidden');
+            });
+
+            adminSubmit.addEventListener('click', function() {
+                if (adminPassword.value === 'admin123') { // Replace with a secure password
+                    isAdminLoggedIn = true;
+                    adminLoginForm.classList.add('hidden');
+                    adminLoginBtn.textContent = 'Admin Logged In';
+                    loadTestimonials(); // Reload testimonials to show delete buttons
+                } else {
+                    alert('Incorrect password');
+                }
+            });
+
+            // Load existing testimonials
+            loadTestimonials();
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const name = document.getElementById('name').value;
+                const review = document.getElementById('review').value;
+                const rating = document.getElementById('rating').value;
+
+                addTestimonial(name, review, rating);
+                saveTestimonials();
+                form.reset();
+            });
+
+            function addTestimonial(name, review, rating, id = Date.now()) {
+                const testimonial = document.createElement('div');
+                testimonial.className = 'testimonial-item';
+                testimonial.dataset.id = id;
+                testimonial.innerHTML = `
+                    <h4>${name}</h4>
+                    <p>${review}</p>
+                    <div class="rating">${'★'.repeat(rating)}${'☆'.repeat(5-rating)}</div>
+                    ${isAdminLoggedIn ? `<button class="delete-btn" onclick="removeTestimonial(${id})">Delete</button>` : ''}
+                `;
+                testimonialGrid.appendChild(testimonial);
+            }
+
+            function saveTestimonials() {
+                const testimonials = Array.from(testimonialGrid.children).map(item => ({
+                    id: item.dataset.id,
+                    name: item.querySelector('h4').textContent,
+                    review: item.querySelector('p').textContent,
+                    rating: item.querySelector('.rating').textContent.split('★').length - 1
+                }));
+                localStorage.setItem('testimonials', JSON.stringify(testimonials));
+            }
+
+            function loadTestimonials() {
+                testimonialGrid.innerHTML = ''; // Clear existing testimonials
+                const testimonials = JSON.parse(localStorage.getItem('testimonials')) || [];
+                testimonials.forEach(t => addTestimonial(t.name, t.review, t.rating, t.id));
+            }
+
+            window.removeTestimonial = function(id) {
+                const testimonial = document.querySelector(`.testimonial-item[data-id="${id}"]`);
+                if (testimonial && isAdminLoggedIn) {
+                    testimonial.remove();
+                    saveTestimonials();
+                }
+            }
+        });
+    </script>
 </body>
 </html>
