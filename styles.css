@@ -384,3 +384,155 @@
       width: 100%;
   }
 }
+
+
+.testimonials {
+  background-color: var(--secondary-color);
+  padding: 4rem 2rem;
+  margin-top: 4rem;
+}
+
+.testimonials h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.testimonial-item {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-item h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-item p {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.testimonial-item .rating {
+  color: #ffd700;
+}
+
+.testimonial-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-form h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.testimonial-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.testimonial-form input,
+.testimonial-form textarea,
+.testimonial-form select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.testimonial-form button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.testimonial-form button:hover {
+  background-color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .testimonial-grid {
+      grid-template-columns: 1fr;
+  }
+}
+.delete-btn {
+  background-color: #ff4136;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #d30000;
+}
+
+/* Update testimonial-item to accommodate the delete button */
+.testimonial-item {
+  /* Existing styles... */
+  position: relative;
+  padding-bottom: 2.5rem;
+}
+
+.testimonial-item .delete-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+
+.admin-login {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+.admin-login button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.admin-login button:hover {
+  background-color: var(--accent-color);
+}
+
+.admin-login input {
+  padding: 5px;
+  margin-right: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.hidden {
+  display: none;
+}
