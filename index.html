@@ -6,6 +6,16 @@
     <title>Statistical Analysis and Machine Learning Methods for Applied Research</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add this CSS to style the transparent black background for the text */
+        .transparent-black-background {
+            background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+            color: white; /* White text color for contrast */
+            padding: 10px; /* Some padding for better appearance */
+            border-radius: 5px; /* Optional: rounded corners */
+            display: inline-block; /* Ensures the background only covers the text */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,7 +30,7 @@
         </nav>
         <div class="header-content">
             <h1>Statistical Analysis and Machine Learning Methods for Applied Research</h1>
-            <p>Unlock the power of data analysis for impactful research!</p>
+            <p class="transparent-black-background">unlock the power of data analysis for impactful research!</p>
         </div>
     </header>
 
@@ -29,7 +39,7 @@
             <div class="course-description">
                 <h2>Embrace the AI Revolution</h2>
                 <p>This comprehensive course equips postgraduate researchers, PhD students, and advanced undergraduates with essential skills in statistical analysis and cutting-edge machine-learning techniques. While focusing on applications in biomedical, clinical, and neuroscience research, the foundational knowledge and practical skills you gain are transferable to diverse fields.</p>
-                <p> This course is a must for anyone working in the research field either as post-doctorate, research fellow, univeristy staff or as grauate or undergraduate students or as research aspirants</p>
+                <p> This course is a must for anyone working in the research field either as post-doctorate, research fellow, university staff or as graduate or undergraduate students or as research aspirants</p>
             </div>
             <div class="course-image">
                 <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Data Analysis Illustration">
@@ -65,18 +75,19 @@
         <section id="chapters" class="chapters">
             <h2>Course Content</h2>
             <div class="chapter">
-                <h3><i class="fas fa-code"></i> Chapter 1: R Programming</h3>
+                <h3><i class="fas fa-code"></i> Course 1: R And Data Analysis</h3>
                 <ul>
                     <li><i class="fas fa-laptop-code"></i> R programming basics</li>
                     <li><i class="fas fa-database"></i> Data Engineering</li>
-                    <li><i class="fas fa-code"></i> P-value and Hypothysis testing</li>
+                    <li><i class="fas fa-code"></i> P-value and Hypothesis testing</li>
+                    <li><i class="fas fa-code"></i> Bootstrapping and permutation methods</li>
                     <li><i class="fas fa-calculator"></i> Descriptive statistics</li>
                     <li><i class="fas fa-chart-bar"></i> Matching Analysis: propensity and weighted</li>
-                    <li><i class="fas fa-plus-circle"></i> Bonus: Clinical databases</li>
+                    <li><i class="fas fa-plus-circle"></i> Bonus: Clinical databases (NIS-NSQIP-SEER): data extraction</li>
                 </ul>
             </div>
             <div class="chapter">
-                <h3><i class="fas fa-chart-line"></i> Chapter 2: Regression and statistical learning</h3>
+                <h3><i class="fas fa-chart-line"></i> Course 2: Regression Analysis And Mathematical Modeling</h3>
                 <ul>
                     <li><i class="fas fa-brain"></i> Statistical learning Framework</li>
                     <li><i class="fas fa-chart-line"></i> Linear Regression</li>
@@ -92,20 +103,28 @@
                 </ul>
             </div>
             <div class="chapter">
-                <h3><i class="fas fa-robot"></i> Chapter 3: Supervised Learning</h3>
+                <h3><i class="fas fa-robot"></i> Course 3: Machine Learning</h3>
                 <ul>
-                    <li><i class="fas fa-cogs"></i> Machine learning models</li>
-                    <li><i class="fas fa-vial"></i> Training, testing a model</li>
-                    <li><i class="fas fa-search"></i> Selection of model, features</li>
+                    <li><i class="fas fa-cogs"></i> Machine learning models architectures</li>
+                    <li><i class="fas fa-vial"></i> Training, testing and cross-validation</li>
+                    <li><i class="fas fa-vial"></i> Features selection</li>
+                    <li><i class="fas fa-search"></i> Model selection</li>
+                    <li><i class="fas fa-search"></i> Model interpretation and feature importance</li>
+                    <li><i class="fas fa-project-diagram"></i> Unsupervised learning: PCA / t-SNE / UMAP</li>
                     <li><i class="fas fa-plus-circle"></i> Bonus: Shiny Application and model deployment</li>
                 </ul>
             </div>
             <div class="chapter">
-                <h3><i class="fas fa-brain"></i> Chapter 4: Unsupervised Learning</h3>
+                <h3><i class="fas fa-brain"></i> Course 4: Deep Learning And Artificial Intelligence</h3>
                 <ul>
-                    <li><i class="fas fa-network-wired"></i> Deep learning introduction</li>
-                    <li><i class="fas fa-language"></i> Large language models, pre-trained models, fine-tuning</li>
-                    <li><i class="fas fa-project-diagram"></i> Unsupervised learning: PCA / t-SNE / UMAP</li>
+                    <li><i class="fas fa-network-wired"></i> Deep learning basics: gradient descent algorithm</li>
+                    <li><i class="fas fa-network-wired"></i> Introduction to Python and PyTorch</li>
+                    <li><i class="fas fa-language"></i> Neural Network architectures</li>
+                    <li><i class="fas fa-language"></i> Pre-trained models</li>
+                    <li><i class="fas fa-language"></i> Large language models and natural language processing</li>
+                    <li><i class="fas fa-image"></i> Medical imaging and computer vision</li>
+                    <li><i class="fas fa-signal"></i> Neural Signal Decoding</li>
+                    <li><i class="fas fa-signal"></i> Deep learning model interpretation</li>
                     <li><i class="fas fa-plus-circle"></i> Bonus: Python Programming</li>
                 </ul>
             </div>
@@ -114,13 +133,12 @@
         <section id="instructor" class="instructor">
             <h2>Meet Your Instructor</h2>
             <div class="instructor-info">
-                <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Dr. Ahmed Shaheen">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8gfB_32nWMZ-e6lws6h4qKmLK3cz5kzS_X42WFr07xtD0_JSM" alt="Dr. Ahmed Shaheen">
                 <div class="instructor-bio">
                     <h3>Dr. Ahmed Shaheen, MD</h3>
-                    <p>Researcher in Clinical Neurology and Computational Neuroscience. He also is Peer-Reviewer for Frontiers, Clinical Case Reports and in the Editorail Board of Plos One.</p>
+                    <p>Researcher in Clinical Neurology and Computational Neuroscience. He also is Peer-Reviewer for Frontiers, Clinical Case Reports and in the Editorial Board of PLOS ONE.</p>
                     <p>Dr. Shaheen brings a wealth of experience in both clinical research and data science, making him uniquely qualified to bridge the gap between traditional statistical methods and cutting-edge AI techniques in biomedical research.</p>
                     <p>He has an h-index of 11 and 45+ publications and 15+ peer reviews.</p>
-
                 </div>
             </div>
         </section>
@@ -130,29 +148,55 @@
             <p>Join us for an immersive learning experience that will revolutionize your approach to data analysis in research.</p>
             <div class="enrollment-options">
                 <div class="enrollment-option">
-                    <h3>Recorded Course - $100</h3>
+                    <h3>Course1 (R and Data Analysis) - $50</h3>
                     <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-6RM2420947039723NM2ZNCQI" class="cta-button">Pay with PayPal</a>
                     <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" class="cta-button">Pay with Vodafone Cash</a>
                 </div>
                 <div class="enrollment-option">
-                    <h3>Online Plus Recorded Course - $150</h3>
+                    <h3>Course2 (Regression Analysis and Mathematical Modeling) - $50</h3>
                     <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-6RM2420947039723NM2ZNCQI" class="cta-button">Pay with PayPal</a>
                     <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" class="cta-button">Pay with Vodafone Cash</a>
                 </div>
                 <div class="enrollment-option">
-                    <h3>Group Discount (25% off for 5 people)</h3>
+                    <h3>Course3 (Machine Learning) - $50</h3>
+                    <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-6RM2420947039723NM2ZNCQI" class="cta-button">Pay with PayPal</a>
+                    <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" class="cta-button">Pay with Vodafone Cash</a>
+                </div>
+                <div class="enrollment-option">
+                    <h3>Course4 (Deep Learning and AI) - $50</h3>
+                    <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-6RM2420947039723NM2ZNCQI" class="cta-button">Pay with PayPal</a>
+                    <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" class="cta-button">Pay with Vodafone Cash</a>
+                </div>
+                <div class="enrollment-option">
+                    <h3>Book - $20</h3>
+                    <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-6RM2420947039723NM2ZNCQI" class="cta-button">Pay with PayPal</a>
+                    <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" class="cta-button">Pay with Vodafone Cash</a>
+                </div>
+                <div class="enrollment-option">
+                    <h3>Bundle of 4 Courses - $100</h3>
+                    <p>You can get 50% discount and have access to all high quality lectures for 4 courses plus book for free</p>
+                    <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-6RM2420947039723NM2ZNCQI" class="cta-button">Pay with PayPal</a>
+                    <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" class="cta-button">Pay with Vodafone Cash</a>
+                </div>
+                <div class="enrollment-option">
+                    <h3>Online Plus Recorded 4 Course - $150</h3>
+                    <p>Live weekly lectures for 4 weeks plus recorded high quality videos for 4 courses and free access to the book</p>
+                    <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-6RM2420947039723NM2ZNCQI" class="cta-button">Pay with PayPal</a>
+                    <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" class="cta-button">Pay with Vodafone Cash</a>
+                </div>
+                <div class="enrollment-option">
+                    <h3>Group Discount (25% off - 5 people)</h3>
                     <p>Contact us directly for group registration and payment instructions.</p>
+                    <p>Group discount applies for bundle, live waves, mentorship and not for the book or separate course.</p>
                     <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" class="cta-button">Submit Group Details</a>
                 </div>
                 <div class="enrollment-option">
                     <h3>Mentorship Program - $50</h3>
-                    <p>Enter a group with a mentor after course so that you will apply what you have learned and publish your first advanced reseaech.<p>
+                    <p>Enter a group with a mentor after course so that you will apply what you have learned and publish your first advanced research.</p>
                     <p>Mentorship program available only for online live waves and groups of 5.</p>
                     <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" class="cta-button">Apply for Mentorship</a>
                 </div>
             </div>
-            <p>After payment, please submit a screenshot of your payment using the Google Form linked above to receive course access.</p>
-        </section>
     </main>
 
     <footer>
