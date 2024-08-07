@@ -1,3 +1,3 @@
 
 ## Course website: 
-##### https://www.ahmed-shaheen.site/
+##### http://www.ahmed-shaheen.site/
