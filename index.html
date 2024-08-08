@@ -201,7 +201,7 @@
                 </ul>
             </div>
             <div class="chapter">
-                <h3><i class="fas fa-brain"></i> Course 12: Mathematics for Medical Ressearch</h3>
+                <h3><i class="fas fa-brain"></i> Course 12:  Mathematics </h3>
                 <ul>
                     <li><i class="fas fa- "></i> Coming soon</li>
                 </ul>
@@ -230,50 +230,32 @@
                 <div class="enrollment-option">
                     <h3>Course 1: R and Data Analysis - $50</h3>
                     <p class="description">A comprehensive introduction to R and fundamental data analysis techniques.</p>
-                    <div class="payment-buttons">
-                        <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-6RM2420947039723NM2ZNCQI" class="cta-button">Pay with PayPal</a>
-                        <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" class="cta-button">Pay with Vodafone Cash</a>
-                    </div>
+                    
                 </div>
                 <div class="enrollment-option">
                     <h3>Course 2: Regression Analysis and Mathematical Modeling - $50</h3>
                     <p class="description">Advanced techniques in regression analysis and mathematical modeling for research.</p>
-                    <div class="payment-buttons">
-                        <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-6RM2420947039723NM2ZNCQI" class="cta-button">Pay with PayPal</a>
-                        <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" class="cta-button">Pay with Vodafone Cash</a>
-                    </div>
+                    
                 </div>
                 <div class="enrollment-option">
                     <h3>Course 3: Machine Learning - $50</h3>
                     <p class="description">Learn the fundamentals of machine learning and its applications in research.</p>
-                    <div class="payment-buttons">
-                        <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-6RM2420947039723NM2ZNCQI" class="cta-button">Pay with PayPal</a>
-                        <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" class="cta-button">Pay with Vodafone Cash</a>
-                    </div>
+                    
                 </div>
                 <div class="enrollment-option">
                     <h3>Course 4: Deep Learning and AI - $50</h3>
                     <p class="description">Explore deep learning and AI techniques for advanced data analysis.</p>
-                    <div class="payment-buttons">
-                        <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-6RM2420947039723NM2ZNCQI" class="cta-button">Pay with PayPal</a>
-                        <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" class="cta-button">Pay with Vodafone Cash</a>
-                    </div>
+                    
                 </div>
                 <div class="enrollment-option">
                     <h3>Book - $20</h3>
                     <p class="description">Get a comprehensive book covering all the course materials.</p>
-                    <div class="payment-buttons">
-                        <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-6RM2420947039723NM2ZNCQI" class="cta-button">Pay with PayPal</a>
-                        <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" class="cta-button">Pay with Vodafone Cash</a>
-                    </div>
+                    
                 </div>
                 <div class="enrollment-option">
                     <h3>Bundle of 4 Courses - $100</h3>
                     <p class="description">Get all 4 courses for a discounted price and receive the book for free.</p>
-                    <div class="payment-buttons">
-                        <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-6RM2420947039723NM2ZNCQI" class="cta-button">Pay with PayPal</a>
-                        <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" class="cta-button">Pay with Vodafone Cash</a>
-                    </div>
+                    
                 </div>
                 <div class="enrollment-option">
                     <h3>Online Plus Recorded 4 Courses - $150</h3>
@@ -298,15 +280,24 @@
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div id="admin-login" class="admin-login">
-                <button id="admin-login-btn">Admin Login</button>
-                <div id="admin-login-form" class="hidden">
-                    <input type="password" id="admin-password" placeholder="Admin Password">
-                    <button id="admin-submit">Login</button>
+        <section id="container"></section>
+            <div class="container">
+                <script src="https://www.paypal.com/sdk/js?client-id=BAAN5SUDtDgHpZ_3d2QtKcVoearpK3ULCNydbf6dBDxeou-8iiDkQ69-FEEnrsFIB6UJu4A4z56Hfz9yDk&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+                <div id="paypal-container-Q2YBKVZFYD8VE"></div>
+                <div class="payment-buttons">
+                    <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" class="cta-button">Pay with Vodafone Cash</a>
                 </div>
+                <script>
+                    paypal.HostedButtons({
+                        hostedButtonId: "Q2YBKVZFYD8VE",
+                    }).render("#paypal-container-Q2YBKVZFYD8VE");
+                </script>
             </div>
-        
+ 
+        </section>  
+        <section id="testimonials" class="section testimonials">
             <div id="testimonials" class="section testimonials">
                 <h2>What Our Students Say</h2>
                 <div class="testimonial-grid" id="testimonial-grid">
@@ -329,9 +320,15 @@
                     </form>
                 </div>
             </div>
+            <div id="admin-login" class="admin-login">
+                <button id="admin-login-btn">Admin Login</button>
+                <div id="admin-login-form" class="hidden">
+                    <input type="password" id="admin-password" placeholder="Admin Password">
+                    <button id="admin-submit">Login</button>
+                </div>
+            </div>
 
         </section>
-
         <section id="contact" class="social-media">
             <h2>Connect with Dr. Ahmed Shaheen</h2>
             <div class="social-icons">
@@ -350,7 +347,6 @@
         <p>&copy; 2024 Statistical Analysis and Machine Learning Methods. All rights reserved.</p>
     </footer>
 
-   
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('testimonial-form');
