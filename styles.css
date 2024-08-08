@@ -1,538 +1,571 @@
 :root {
-    --primary-color: #3a7bd5;
-    --secondary-color: #f5f7fa;
-    --accent-color: #00d2ff;
-    --bg-color: #ffffff;
-    --text-color: #333333;
-    --header-image: url('https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--bg-color);
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background: linear-gradient(rgba(58, 123, 213, 0.8), rgba(0, 210, 255, 0.8)), var(--header-image) no-repeat center center/cover;
-    color: var(--secondary-color);
-    text-align: center;
-    padding: 8rem 0;
-    position: relative;
-  }
-  
-  nav {
-    background-color: rgba(255, 255, 255, 0.95);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav ul li a {
-    display: block;
-    padding: 1rem 1.5rem;
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-  
-  nav ul li a:hover {
-    color: var(--primary-color);
-  }
-  
-  .header-content h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-  
-  .header-content p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-  }
-  
-  .course-info {
-    display: flex;
-    align-items: center;
-    background-color: var(--secondary-color);
-    border-radius: 10px;
-    overflow: hidden;
-    margin-top: -100px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  }
-  
-  .course-description {
-    flex: 1;
-    padding: 3rem;
-  }
-  
-  .course-image {
-    flex: 0 0 50%;
-    height: 400px;
-    overflow: hidden;
-  }
-  
-  .course-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .highlights {
-    margin-top: 4rem;
-    text-align: center;
-  }
-  
-  .highlight-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  
-  .highlight-item {
-    background-color: var(--secondary-color);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .highlight-item:hover {
-    transform: translateY(-5px);
-  }
-  
-  .highlight-item i {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-  }
-  
-  .chapters {
-    margin-top: 4rem;
-  }
-  
-  .chapter {
-    background-color: var(--secondary-color);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-  }
-  
-  .chapter h3 {
-    color: var(--primary-color);
-    display: flex;
-    align-items: center;
-  }
-  
-  .chapter h3 i {
-    margin-right: 0.5rem;
-  }
-  
-  .chapter ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  
-  .chapter ul li {
-    margin-bottom: 0.5rem;
-    display: flex;
-    align-items: center;
-  }
-  
-  .chapter ul li i {
-    color: var(--accent-color);
-    margin-right: 0.5rem;
-  }
-  
-  .instructor {
-    margin-top: 4rem;
-  }
-  
-  .instructor-info {
-    display: flex;
-    align-items: center;
-    background-color: var(--secondary-color);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .instructor-info img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .instructor-bio {
-    padding: 2rem;
-  }
-  
-  .enroll {
-    margin-top: 4rem;
-    text-align: center;
-    background-color: var(--secondary-color);
-    padding: 4rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .cta-button {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: var(--accent-color);
-  }
-  
-  footer {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 4rem;
-  }
-  
-  @media (max-width: 768px) {
-    .course-info, .instructor-info {
-      flex-direction: column;
-    }
-  
-    .course-image, .instructor-info img {
-      width: 100%;
-      height: 300px;
-    }
-  
-    .highlight-grid {
-      grid-template-columns: 1fr;
-    }
-  }
+  --primary-color: #3a7bd5;
+  --secondary-color: #f5f7fa;
+  --accent-color: #00d2ff;
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --header-image: url('https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+}
 
-  /* New styles for contact section */
-.contact {
-  margin-top: 4rem;
-  background-color: var(--secondary-color);
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: linear-gradient(rgba(58, 123, 213, 0.8), rgba(0, 210, 255, 0.8)), var(--header-image) no-repeat center center/cover;
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 8rem 0;
+  position: relative;
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+.header-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 4rem 2rem;
+}
+
+.course-info {
+  display: flex;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: -100px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.course-description {
+  flex: 1;
+  padding: 3rem;
+}
+
+.course-image {
+  flex: 0 0 50%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.course-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.highlights {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.highlight-item {
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.highlight-item:hover {
+  transform: translateY(-5px);
+}
+
+.highlight-item i {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.chapters {
+  margin-top: 4rem;
+}
+
+.chapter {
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.chapter h3 {
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+}
+
+.chapter h3 i {
+  margin-right: 0.5rem;
+}
+
+.chapter ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.chapter ul li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.chapter ul li i {
+  color: var(--accent-color);
+  margin-right: 0.5rem;
+}
+
+.instructor {
+  margin-top: 4rem;
+}
+
+.instructor-info {
+  display: flex;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.instructor-info img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.instructor-bio {
+  padding: 2rem;
+}
+
+.enroll {
+  margin-top: 4rem;
+  text-align: center;
+  background-color: var(--secondary-color);
+  padding: 4rem;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.contact h2 {
+.cta-button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--accent-color);
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   text-align: center;
-  margin-bottom: 2rem;
+  padding: 1rem 0;
+  margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+  .course-info, .instructor-info {
+    flex-direction: column;
+  }
+
+  .course-image, .instructor-info img {
+    width: 100%;
+    height: 300px;
+  }
+
+  .highlight-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* New styles for contact section */
+.contact {
+margin-top: 4rem;
+background-color: var(--secondary-color);
+padding: 4rem 2rem;
+border-radius: 10px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+text-align: center;
+margin-bottom: 2rem;
 }
 
 .contact-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
 }
 
 .contact-info, .social-media {
-  flex: 1;
-  min-width: 250px;
-  padding: 1rem;
+flex: 1;
+min-width: 250px;
+padding: 1rem;
 }
 
 .contact-info h3, .social-media h3 {
-  color: var(--primary-color);
-  margin-bottom: 1rem;
+color: var(--primary-color);
+margin-bottom: 1rem;
 }
 
 .contact-info p {
-  margin-bottom: 0.5rem;
+margin-bottom: 0.5rem;
 }
 
 .contact-info i, .social-icons i {
-  color: var(--primary-color);
-  margin-right: 0.5rem;
+color: var(--primary-color);
+margin-right: 0.5rem;
 }
 
 .social-icons {
-  display: flex;
-  gap: 1rem;
+display: flex;
+gap: 1rem;
 }
 
 .social-icons a {
-  color: var(--primary-color);
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
+color: var(--primary-color);
+font-size: 1.5rem;
+transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: var(--accent-color);
+color: var(--accent-color);
 }
 
 /* Update media query for responsiveness */
 @media (max-width: 768px) {
-  .contact-content {
-    flex-direction: column;
-  }
-
-  .contact-info, .social-media {
-    width: 100%;
-    margin-bottom: 2rem;
-  }
+.contact-content {
+  flex-direction: column;
 }
 
- /* Add this CSS to style the enrollment section */
- .enroll {
-  background-color: #f8f9fa;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
-  max-width: 1200px;
-  text-align: center;
+.contact-info, .social-media {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+}
+
+/* Add this CSS to style the enrollment section */
+.enroll {
+background-color: #f8f9fa;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+margin: 20px auto;
+max-width: 1200px;
+text-align: center;
 }
 
 .enroll h2 {
-  color: #333;
-  margin-bottom: 15px;
+color: #333;
+margin-bottom: 15px;
 }
 
 .enroll p {
-  color: #666;
-  margin-bottom: 20px;
+color: #666;
+margin-bottom: 20px;
 }
 
 .enrollment-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+justify-content: center;
 }
 
 .enrollment-option {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  width: calc(33% - 40px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  transition: box-shadow 0.3s;
+background-color: #fff;
+border: 1px solid #ddd;
+border-radius: 8px;
+padding: 20px;
+width: calc(33% - 40px);
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+text-align: left;
+transition: box-shadow 0.3s;
 }
 
 .enrollment-option:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .enrollment-option h3 {
-  margin-top: 0;
-  color: #333;
+margin-top: 0;
+color: #333;
 }
 
 .enrollment-option .description {
-  color: #666;
-  font-size: 0.9em;
-  margin-bottom: 10px;
+color: #666;
+font-size: 0.9em;
+margin-bottom: 10px;
 }
 
 .payment-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+display: flex;
+flex-direction: column;
+gap: 10px;
 }
 
 .cta-button {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 5px;
-  color: #fff;
-  background-color: #007bff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
+display: inline-block;
+padding: 10px 20px;
+border-radius: 5px;
+color: #fff;
+background-color: #007bff;
+text-decoration: none;
+font-weight: bold;
+transition: background-color 0.3s;
 }
 
 .cta-button:hover {
-  background-color: #0056b3;
+background-color: #0056b3;
 }
 
 @media (max-width: 768px) {
-  .enrollment-option {
-      width: 100%;
-  }
+.enrollment-option {
+    width: 100%;
+}
 }
 
 
 .testimonials {
-  background-color: var(--secondary-color);
-  padding: 4rem 2rem;
-  margin-top: 4rem;
+background-color: var(--secondary-color);
+padding: 4rem 2rem;
+margin-top: 4rem;
 }
 
 .testimonials h2 {
-  text-align: center;
-  color: var(--primary-color);
-  margin-bottom: 2rem;
+text-align: center;
+color: var(--primary-color);
+margin-bottom: 2rem;
 }
 
 .testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 2rem;
+margin-bottom: 3rem;
 }
 
 .testimonial-item {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+background-color: #fff;
+border-radius: 8px;
+padding: 1.5rem;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .testimonial-item h4 {
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
+color: var(--primary-color);
+margin-bottom: 0.5rem;
 }
 
 .testimonial-item p {
-  font-style: italic;
-  margin-bottom: 1rem;
+font-style: italic;
+margin-bottom: 1rem;
 }
 
 .testimonial-item .rating {
-  color: #ffd700;
+color: #ffd700;
 }
 
 .testimonial-form {
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+max-width: 600px;
+margin: 0 auto;
+background-color: #fff;
+padding: 2rem;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .testimonial-form h3 {
-  color: var(--primary-color);
-  margin-bottom: 1rem;
+color: var(--primary-color);
+margin-bottom: 1rem;
 }
 
 .testimonial-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+display: flex;
+flex-direction: column;
+gap: 1rem;
 }
 
 .testimonial-form input,
 .testimonial-form textarea,
 .testimonial-form select {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+width: 100%;
+padding: 0.5rem;
+border: 1px solid #ddd;
+border-radius: 4px;
 }
 
 .testimonial-form button {
-  background-color: var(--primary-color);
-  color: #fff;
-  border: none;
-  padding: 0.75rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+background-color: var(--primary-color);
+color: #fff;
+border: none;
+padding: 0.75rem;
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.3s;
 }
 
 .testimonial-form button:hover {
-  background-color: var(--accent-color);
+background-color: var(--accent-color);
 }
 
 @media (max-width: 768px) {
-  .testimonial-grid {
-      grid-template-columns: 1fr;
-  }
+.testimonial-grid {
+    grid-template-columns: 1fr;
+}
 }
 .delete-btn {
-  background-color: #ff4136;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.8rem;
-  margin-top: 10px;
-  transition: background-color 0.3s;
+background-color: #ff4136;
+color: white;
+border: none;
+padding: 5px 10px;
+border-radius: 4px;
+cursor: pointer;
+font-size: 0.8rem;
+margin-top: 10px;
+transition: background-color 0.3s;
 }
 
 .delete-btn:hover {
-  background-color: #d30000;
+background-color: #d30000;
 }
 
 /* Update testimonial-item to accommodate the delete button */
 .testimonial-item {
-  /* Existing styles... */
-  position: relative;
-  padding-bottom: 2.5rem;
+/* Existing styles... */
+position: relative;
+padding-bottom: 2.5rem;
 }
 
 .testimonial-item .delete-btn {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+position: absolute;
+bottom: 10px;
+right: 10px;
 }
 
 
 .admin-login {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 1000;
+position: fixed;
+top: 10px;
+right: 10px;
+z-index: 1000;
 }
 
 .admin-login button {
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.3s;
+background-color: var(--primary-color);
+color: white;
+border: none;
+padding: 5px 10px;
+border-radius: 4px;
+cursor: pointer;
+font-size: 0.9rem;
+transition: background-color 0.3s;
 }
 
 .admin-login button:hover {
-  background-color: var(--accent-color);
+background-color: var(--accent-color);
 }
 
 .admin-login input {
-  padding: 5px;
-  margin-right: 5px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+padding: 5px;
+margin-right: 5px;
+border: 1px solid #ddd;
+border-radius: 4px;
 }
 
 .hidden {
-  display: none;
+display: none;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#paypal-container-Q2YBKVZFYD8VE {
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #0070ba;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #005a9c;
 }
