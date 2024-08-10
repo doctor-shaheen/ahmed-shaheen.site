@@ -22,10 +22,6 @@
 </head>
 <body>
     <header>
-        <div id="search-container">
-            <input type="text" id="search-input" placeholder="Search courses, instructor, research...">
-            <div id="search-results"></div>
-        </div>
         <div class="header-content">
             <h1>Ahmed Shaheen-MD</h1>
             <h2>Statistical Analysis and Machine Learning for Medical Research</h2>
@@ -460,86 +456,30 @@
             }
         });
     </script>
-    <script>
-        // Define searchable content
-        const searchableContent = [
-            { type: 'course', content: Array.from(document.querySelectorAll('.chapter h3, .chapter li')).map(el => el.textContent).join(' ') },
-            { type: 'instructor', content: document.querySelector('.instructor-bio').textContent },
-            { type: 'research', content: document.querySelector('.research').textContent },
-            { type: 'testimonial', content: document.querySelector('.testimonials').textContent }
-        ];
-
-        function performSearch(query) {
-            const results = [];
-            const lowerQuery = query.toLowerCase();
-
-            searchableContent.forEach(item => {
-                const matches = item.content.toLowerCase().match(new RegExp(`\\b${lowerQuery}.+?\\b`, 'gi'));
-                if (matches) {
-                    results.push({
-                        type: item.type,
-                        matches: matches.map(match => ({
-                            text: match,
-                            context: item.content.substring(Math.max(0, item.content.toLowerCase().indexOf(match) - 50), 
-                                                            Math.min(item.content.length, item.content.toLowerCase().indexOf(match) + match.length + 50))
-                        }))
-                    });
-                }
-            });
-
-            return results;
-        }
-
-        // Example usage
-        document.querySelector('#search-input').addEventListener('input', (e) => {
-            const query = e.target.value;
-            if (query.length > 2) {
-                const searchResults = performSearch(query);
-                displaySearchResults(searchResults);
-            } else {
-                clearSearchResults();
-            }
-        });
-
-        function displaySearchResults(results) {
-            const resultsContainer = document.querySelector('#search-results');
-            resultsContainer.innerHTML = '';
-
-            results.forEach(result => {
-                const resultElement = document.createElement('div');
-                resultElement.classList.add('search-result', result.type);
-                
-                const titleElement = document.createElement('h3');
-                titleElement.textContent = result.type.charAt(0).toUpperCase() + result.type.slice(1);
-                resultElement.appendChild(titleElement);
-
-                result.matches.forEach(match => {
-                    const matchElement = document.createElement('p');
-                    matchElement.innerHTML = `...${match.context.replace(new RegExp(`(${match.text})`, 'gi'), '<strong>$1</strong>')}...`;
-                    resultElement.appendChild(matchElement);
-                });
-
-                resultsContainer.appendChild(resultElement);
-            });
-        }
-
-        function clearSearchResults() {
-            document.querySelector('#search-results').innerHTML = '';
-        }
-    </script>
+    
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "Course",
           "name": "Statistical Analysis and Machine Learning for Medical Research",
-          "description": "Comprehensive online courses covering statistical analysis, machine learning, and AI techniques for biomedical, clinical, and neuroscience research.",
+          "description": "Comprehensive online courses covering statistical analysis, machine learning, and AI techniques for biomedical, clinical, and neuroscience research and medical research methodology.",
           "provider": {
             "@type": "Person",
-            "name": "Dr. Ahmed Shaheen",
+            "name": "Dr. Ahmed Shaheen - MD",
             "sameAs": [
               "https://scholar.google.com/citations?user=mRCNMuYAAAAJ&hl=en",
               "https://www.researchgate.net/profile/Ahmed-Shaheen-6",
-              "https://orcid.org/0000-0001-9731-5065"
+              "https://orcid.org/0000-0001-9731-5065",
+              "https://x.com/drahmsh",
+              "https://www.linkedin.com/in/neurointell/",
+              "https://www.facebook.com/drahmsha",
+              "https://pubmed.ncbi.nlm.nih.gov/?term=Shaheen+A&cauthor_id=37113540",
+              "https://github.com/doctor-shaheen",
+              "https://www.instagram.com/drahmsha/",
+              "https://www.youtube.com/@ahmdshhn",
+              "https://rpubs.com/ahmeds1999haheen"
+
+              
             ]
           },
           "offers": {
