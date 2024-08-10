@@ -13,7 +13,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Ahmed Shaheen (MBBCH) - Statistical Analysis and Machine Learning for Applied Research: Biosatistics, Machine Learning, Deep Learning and Artificial Intelligence Course</title>
+    <title>Ahmed Shaheen, MD - Statistical Analysis and Machine Learning for Applied Research: Biosatistics, Machine Learning, Deep Learning and Artificial Intelligence Online Course</title>
     <meta name="description" content="Expert-led courses in statistical analysis and machine learning for biomedical, clinical, and neuroscience research by Dr. Ahmed Shaheen. Unlock the power of data analysis for impactful research.">
     <meta name="keywords" content="statistical analysis, machine learning, biomedical research, clinical research, neuroscience, data analysis, R programming, Python, deep learning, AI">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -22,6 +22,16 @@
 </head>
 <body>
     <header>
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Search courses, instructor, research...">
+            <div id="search-results"></div>
+        </div>
+        <div class="header-content">
+            <h1>Ahmed Shaheen-MD</h1>
+            <h2>Statistical Analysis and Machine Learning for Medical Research</h2>
+            <h3>Online Courses to Transform Your Research Skills</h3>
+            <p class="transparent-black-background">Unlock the Power of Data Analysis for Impactful Medical Research</p>
+        </div>
         <nav>
             <ul>
                 <li><a href="#course-info">Home</a></li>
@@ -33,14 +43,8 @@
                 <li><a href="#contact">Contact us</a></li>
             </ul>
         </nav>
-        <div class="header-content">
-            <h1>Ahmed Shaheen - MD</h1>
-            <h2>Statistical Analysis and Machine Learning Methods for Applied Research</h2>
-            <p class="transparent-black-background">Unlock the Power of Data Analysis for Impactful Medical Research</p>
-        </div>
-        <div class="header-content">
-            <h3>Take your clinical and biomedical research to the next level with advanced research methodology</h3>
-        </div>
+        
+        
     </header>
 
     <main>
@@ -236,7 +240,7 @@
                     </div>
                 </div>
                 <div class="research-profiles">
-                    <h3>More Research Profiles</h3>
+                    <h3>More Research</h3>
                     <a href="https://scholar.google.com/citations?user=mRCNMuYAAAAJ&hl=en" target="_blank">Google Scholar</a>
                     <a href="https://www.researchgate.net/profile/Ahmed-Shaheen-6" target="_blank">ResearchGate</a>
                     <a href="https://orcid.org/0000-0001-9731-5065" target="_blank">ORCID</a>
@@ -374,7 +378,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Statistical Analysis and Machine Learning Methods. All rights reserved.</p>
+        <p>&copy; 2024 Dr. Ahmed Shaheen - Statistical Analysis and Machine Learning Methods. All rights reserved.</p>
     </footer>
 
     <script>
@@ -456,5 +460,94 @@
             }
         });
     </script>
+    <script>
+        // Define searchable content
+        const searchableContent = [
+            { type: 'course', content: Array.from(document.querySelectorAll('.chapter h3, .chapter li')).map(el => el.textContent).join(' ') },
+            { type: 'instructor', content: document.querySelector('.instructor-bio').textContent },
+            { type: 'research', content: document.querySelector('.research').textContent },
+            { type: 'testimonial', content: document.querySelector('.testimonials').textContent }
+        ];
+
+        function performSearch(query) {
+            const results = [];
+            const lowerQuery = query.toLowerCase();
+
+            searchableContent.forEach(item => {
+                const matches = item.content.toLowerCase().match(new RegExp(`\\b${lowerQuery}.+?\\b`, 'gi'));
+                if (matches) {
+                    results.push({
+                        type: item.type,
+                        matches: matches.map(match => ({
+                            text: match,
+                            context: item.content.substring(Math.max(0, item.content.toLowerCase().indexOf(match) - 50), 
+                                                            Math.min(item.content.length, item.content.toLowerCase().indexOf(match) + match.length + 50))
+                        }))
+                    });
+                }
+            });
+
+            return results;
+        }
+
+        // Example usage
+        document.querySelector('#search-input').addEventListener('input', (e) => {
+            const query = e.target.value;
+            if (query.length > 2) {
+                const searchResults = performSearch(query);
+                displaySearchResults(searchResults);
+            } else {
+                clearSearchResults();
+            }
+        });
+
+        function displaySearchResults(results) {
+            const resultsContainer = document.querySelector('#search-results');
+            resultsContainer.innerHTML = '';
+
+            results.forEach(result => {
+                const resultElement = document.createElement('div');
+                resultElement.classList.add('search-result', result.type);
+                
+                const titleElement = document.createElement('h3');
+                titleElement.textContent = result.type.charAt(0).toUpperCase() + result.type.slice(1);
+                resultElement.appendChild(titleElement);
+
+                result.matches.forEach(match => {
+                    const matchElement = document.createElement('p');
+                    matchElement.innerHTML = `...${match.context.replace(new RegExp(`(${match.text})`, 'gi'), '<strong>$1</strong>')}...`;
+                    resultElement.appendChild(matchElement);
+                });
+
+                resultsContainer.appendChild(resultElement);
+            });
+        }
+
+        function clearSearchResults() {
+            document.querySelector('#search-results').innerHTML = '';
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Course",
+          "name": "Statistical Analysis and Machine Learning for Medical Research",
+          "description": "Comprehensive online courses covering statistical analysis, machine learning, and AI techniques for biomedical, clinical, and neuroscience research.",
+          "provider": {
+            "@type": "Person",
+            "name": "Dr. Ahmed Shaheen",
+            "sameAs": [
+              "https://scholar.google.com/citations?user=mRCNMuYAAAAJ&hl=en",
+              "https://www.researchgate.net/profile/Ahmed-Shaheen-6",
+              "https://orcid.org/0000-0001-9731-5065"
+            ]
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "50",
+            "priceCurrency": "USD"
+          }
+        }
+        </script>
 </body>
 </html>
