@@ -6,7 +6,13 @@
   --text-color: #333333;
   --header-image: url('https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
 }
-
+.transparent-black-background {
+            background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+            color: white; /* White text color for contrast */
+            padding: 10px; /* Some padding for better appearance */
+            border-radius: 5px; /* Optional: rounded corners */
+            display: inline-block; /* Ensures the background only covers the text */
+}
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
