@@ -636,3 +636,22 @@ display: none;
 .research-profiles a:hover {
   background-color: #218838;
 }
+
+
+#search-input {
+  width: 40%;
+  padding: 10px;
+  font-size: 16px;
+}
+#search-results {
+  margin-top: 20px;
+}
+.search-result {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #665151;
+  border: 1px solid #6b6868;
+}
+.search-result strong {
+  background-color: yellow;
+}
