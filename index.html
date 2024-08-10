@@ -84,119 +84,371 @@
         <section id="chapters" class="chapters">
             <h2>Courses</h2>
             <div class="chapter">
-                <h3><i class="fas fa-code"></i> Course 1: R And Data Analysis</h3>
-                <ul>
-                    <li><i class="fas fa-laptop-code"></i> R programming basics</li>
-                    <li><i class="fas fa-database"></i> Data Engineering</li>
-                    <li><i class="fas fa-code"></i> P-value and Hypothesis testing</li>
-                    <li><i class="fas fa-code"></i> Bootstrapping and permutation methods</li>
-                    <li><i class="fas fa-calculator"></i> Descriptive statistics</li>
-                    <li><i class="fas fa-chart-bar"></i> Matching Analysis: propensity and weighted</li>
-                    <li><i class="fas fa-plus-circle"></i> Bonus: Clinical databases (NIS-NSQIP-SEER): data extraction</li>
+                <h3><i class="fas fa-code"></i> Course 1: R Programming and Data Analysis Fundamentals</h3>
+                <ul class="chapter-outline">
+                    <li>
+                        <i class="fas fa-laptop-code"></i> R Basics: Exploring COVID-19 Data
+                        <ul>
+                            <li>R fundamentals and data types</li>
+                            <li>Basic operations and functions</li>
+                            <li>Control structures and vectorization</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-chart-line"></i> Data Visualization with ggplot2
+                        <ul>
+                            <li>Understanding ggplot2 layers</li>
+                            <li>Creating various plot types</li>
+                            <li>Customizing visualizations</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-database"></i> Data Engineering with Tidyverse
+                        <ul>
+                            <li>Tidy data principles</li>
+                            <li>Data manipulation with dplyr</li>
+                            <li>Advanced tidyverse operations</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-broom"></i> Handling Missing Data and Pre-processing
+                        <ul>
+                            <li>Types of missing data</li>
+                            <li>Imputation techniques</li>
+                            <li>Data transformation and encoding</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-calculator"></i> Descriptive Statistics and Normality Testing
+                        <ul>
+                            <li>Summary statistics and tables</li>
+                            <li>Measures of central tendency and dispersion</li>
+                            <li>Assessing normality</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-code"></i> P-values and Statistical Tests
+                        <ul>
+                            <li>Hypothesis testing fundamentals</li>
+                            <li>Parametric and non-parametric tests</li>
+                            <li>Multiple testing correction</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-chart-bar"></i> Matching Analysis Techniques
+                        <ul>
+                            <li>Propensity Score Weighting (PSW)</li>
+                            <li>Propensity Score Matching (PSM)</li>
+                            <li>Assessing balance and analyzing outcomes</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-robot"></i> Introduction to Large Language Models
+                        <ul>
+                            <li>Using Gemini for data extraction</li>
+                            <li>BioMistral for disease prognosis prediction</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-plus-circle"></i> Bonus: Clinical Databases
+                        <ul>
+                            <li>Overview of NSQIP, SEER, and NIS</li>
+                            <li>Data extraction techniques</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <div class="chapter">
                 <h3><i class="fas fa-chart-line"></i> Course 2: Regression Analysis And Mathematical Modeling</h3>
-                <ul>
-                    <li><i class="fas fa-brain"></i> Statistical learning Framework</li>
-                    <li><i class="fas fa-chart-line"></i> Linear Regression</li>
-                    <li><i class="fas fa-chart-bar"></i> Logistic Regression</li>
-                    <li><i class="fas fa-calculator"></i> Lasso regression and regularization</li>
-                    <li><i class="fas fa-calculator"></i> Non-linearity: polynomials and splines</li>
-                    <li><i class="fas fa-heartbeat"></i> Survival analysis IPD from KM Meta-analysis, nomogram</li>
-                    <li><i class="fas fa-search"></i> Reconstructed meta-analysis from survival plots: IPD from KM</li>
-                    <li><i class="fas fa-project-diagram"></i> Nomograms</li>
-                    <li><i class="fas fa-laptop-code"></i> Diagnostic test analysis</li>
-                    <li><i class="fas fa-laptop-code"></i> Calibration</li>
-                    <li><i class="fas fa-plus-circle"></i> Bonus: Meta-analysis</li>
+                <ul class="chapter-outline">
+                    <li>
+                        <i class="fas fa-brain"></i>
+                        <span>Statistical Learning Framework</span>
+                        <ul>
+                            <li>Regression vs Classification</li>
+                            <li>Parametric, Non-Parametric, and Semi-Parametric Models</li>
+                            <li>Bias-Variance Tradeoff</li>
+                            <li>Curse of Dimensionality</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-chart-line"></i>
+                        <span>Linear Regression</span>
+                        <ul>
+                            <li>Simple Linear Regression</li>
+                            <li>Multiple Linear Regression</li>
+                            <li>Assumptions and Diagnostics</li>
+                            <li>Model Evaluation: R-squared, Adjusted R-squared</li>
+                            <li>Confidence Intervals and Hypothesis Testing</li>
+                            <li>The F-Statistic and Model Comparison</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Logistic Regression</span>
+                        <ul>
+                            <li>The Logistic Function and Probability Transformation</li>
+                            <li>Odds Ratios and Interpretation</li>
+                            <li>Maximum Likelihood Estimation</li>
+                            <li>Model Evaluation: AIC and BIC</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-calculator"></i>
+                        <span>Regularization Techniques</span>
+                        <ul>
+                            <li>Lasso Regression (L1)</li>
+                            <li>Ridge Regression (L2)</li>
+                            <li>Elastic Net</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-wave-square"></i>
+                        <span>Non-linearity in Regression</span>
+                        <ul>
+                            <li>Polynomial Regression</li>
+                            <li>Spline Functions</li>
+                            <li>Generalized Additive Models (GAMs)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-heartbeat"></i>
+                        <span>Survival Analysis</span>
+                        <ul>
+                            <li>Kaplan-Meier Curves</li>
+                            <li>Cox Proportional Hazards Model</li>
+                            <li>IPD from KM Meta-analysis</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-project-diagram"></i>
+                        <span>Advanced Modeling Techniques</span>
+                        <ul>
+                            <li>Nomograms</li>
+                            <li>Fixed vs Random Effects Models</li>
+                            <li>Model Selection Strategies</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-laptop-code"></i>
+                        <span>Model Evaluation and Diagnostics</span>
+                        <ul>
+                            <li>Diagnostic Test Analysis</li>
+                            <li>Model Calibration</li>
+                            <li>Overfitting and Cross-validation</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Bonus: Meta-analysis</span>
+                        <ul>
+                            <li>Fixed and Random Effects Meta-analysis</li>
+                            <li>Forest Plots</li>
+                            <li>Publication Bias Assessment</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <div class="chapter">
                 <h3><i class="fas fa-robot"></i> Course 3: Machine Learning</h3>
-                <ul>
-                    <li><i class="fas fa-cogs"></i> Machine learning models architectures</li>
-                    <li><i class="fas fa-vial"></i> Training, testing and cross-validation</li>
-                    <li><i class="fas fa-vial"></i> Features selection</li>
-                    <li><i class="fas fa-search"></i> Model selection</li>
-                    <li><i class="fas fa-search"></i> Model interpretation and feature importance</li>
-                    <li><i class="fas fa-project-diagram"></i> Unsupervised learning: PCA / t-SNE / UMAP</li>
-                    <li><i class="fas fa-plus-circle"></i> Bonus: Shiny Application and model deployment</li>
+                <ul class="chapter-outline">
+                    <li>
+                        <i class="fas fa-cogs"></i> Machine Learning Model Architectures
+                        <ul>
+                            <li>Overview of model types and their applications</li>
+                            <li>Support Vector Machines, Decision Trees, and Ensemble Methods</li>
+                            <li>Hyperparameter tuning and optimization</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-vial"></i> Training, Testing, and Cross-validation
+                        <ul>
+                            <li>Data splitting strategies</li>
+                            <li>Validation techniques and metrics</li>
+                            <li>Avoiding overfitting and underfitting</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-vial"></i> Feature Selection
+                        <ul>
+                            <li>Importance of feature selection</li>
+                            <li>Techniques for selecting and engineering features</li>
+                            <li>Dimensionality reduction methods</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-search"></i> Model Selection
+                        <ul>
+                            <li>Choosing the right model for your problem</li>
+                            <li>Comparison of model performance</li>
+                            <li>Ensemble methods and stacking</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-search"></i> Model Interpretation and Feature Importance
+                        <ul>
+                            <li>Understanding model predictions</li>
+                            <li>Techniques for interpreting complex models</li>
+                            <li>Visualizing feature importance</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-project-diagram"></i> Unsupervised Learning
+                        <ul>
+                            <li>Principal Component Analysis (PCA)</li>
+                            <li>t-Distributed Stochastic Neighbor Embedding (t-SNE)</li>
+                            <li>Uniform Manifold Approximation and Projection (UMAP)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-plus-circle"></i> Bonus: Shiny Application and Model Deployment
+                        <ul>
+                            <li>Creating interactive web applications with Shiny</li>
+                            <li>Deploying models for real-time use</li>
+                            <li>Best practices for maintaining deployed models</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <div class="chapter">
-                <h3><i class="fas fa-brain"></i> Course 4: Deep Learning And Artificial Intelligence</h3>
-                <ul>
-                    <li><i class="fas fa-network-wired"></i> Deep learning basics: gradient descent algorithm</li>
-                    <li><i class="fas fa-network-wired"></i> Introduction to Python and PyTorch</li>
-                    <li><i class="fas fa-language"></i> Neural Network architectures</li>
-                    <li><i class="fas fa-language"></i> Pre-trained models</li>
-                    <li><i class="fas fa-language"></i> Large language models and natural language processing</li>
-                    <li><i class="fas fa-image"></i> Medical imaging and computer vision</li>
-                    <li><i class="fas fa-signal"></i> Neural Signal Decoding</li>
-                    <li><i class="fas fa-signal"></i> Deep learning model interpretation</li>
-                    <li><i class="fas fa-plus-circle"></i> Bonus: Python Programming</li>
+                <h3><i class="fas fa-brain"></i> Course 4: Deep Learning and Artificial Intelligence</h3>
+                <ul class="chapter-outline">
+                    <li>
+                        <i class="fas fa-network-wired"></i> Deep Learning Basics: Gradient Descent Algorithm
+                        <ul>
+                            <li>Introduction to gradient descent</li>
+                            <li>Types of gradient descent algorithms</li>
+                            <li>Optimizers and their roles</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-network-wired"></i> Introduction to Python and PyTorch
+                        <ul>
+                            <li>Python basics for deep learning</li>
+                            <li>Setting up and using PyTorch</li>
+                            <li>Building and training neural networks with PyTorch</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-language"></i> Neural Network Architectures
+                        <ul>
+                            <li>Feedforward Neural Networks</li>
+                            <li>Convolutional Neural Networks (CNNs)</li>
+                            <li>Recurrent Neural Networks (RNNs) and Transformers</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-language"></i> Pre-trained Models
+                        <ul>
+                            <li>Using pre-trained models for transfer learning</li>
+                            <li>Fine-tuning models for specific tasks</li>
+                            <li>Popular pre-trained models and their applications</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-language"></i> Large Language Models and Natural Language Processing
+                        <ul>
+                            <li>Introduction to large language models</li>
+                            <li>Applications in NLP</li>
+                            <li>Fine-tuning and using language models</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-image"></i> Medical Imaging and Computer Vision
+                        <ul>
+                            <li>Basics of medical imaging techniques</li>
+                            <li>Computer vision models and applications</li>
+                            <li>Image pre-processing and augmentation</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-signal"></i> Neural Signal Decoding
+                        <ul>
+                            <li>Techniques for decoding neural signals</li>
+                            <li>Applications in neuroscience and brain-computer interfaces</li>
+                            <li>Challenges and solutions in signal processing</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-signal"></i> Deep Learning Model Interpretation
+                        <ul>
+                            <li>Understanding model decisions and predictions</li>
+                            <li>Techniques for interpreting deep learning models</li>
+                            <li>Visualization tools and methods</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="fas fa-plus-circle"></i> Bonus: Python Programming
+                        <ul>
+                            <li>Advanced Python programming techniques</li>
+                            <li>Libraries and tools for deep learning</li>
+                            <li>Best practices for Python coding in AI</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
-            <div class="chapter">
-                <h3><i class="fas fa-brain"></i> Course 5: EEG And Medical Time Series Analysis</h3>
-                <ul>
-                    <li><i class="fas fa- "></i> Coming soon</li>
-                </ul>
-            </div>
-            <div class="chapter">
-                <h3><i class="fas fa-brain"></i> Course 6: Medical Image Analysis</h3>
-                <ul>
-                    <li><i class="fas fa- "></i> Coming soon</li>
-                </ul>
-            </div>
-            <div class="chapter">
-                <h3><i class="fas fa-brain"></i> Course 7: Clinical Research Methodology</h3>
-                <ul>
-                    <li><i class="fas fa- "></i> Coming soon</li>
-                </ul>
-            </div>
-            <div class="chapter">
-                <h3><i class="fas fa-brain"></i> Course 8: Scientific Writing</h3>
-                <ul>
-                    <li><i class="fas fa- "></i> Coming soon</li>
-                </ul>
-            </div>
-            <div class="chapter">
-                <h3><i class="fas fa-brain"></i> Course 9: Study Protocol and Fund Proposal</h3>
-                <ul>
-                    <li><i class="fas fa- "></i> Coming soon</li>
-                </ul>
-            </div>
-            <div class="chapter">
-                <h3><i class="fas fa-brain"></i> Course 10: Meta-Analysis</h3>
-                <ul>
-                    <li><i class="fas fa- "></i> Coming soon</li>
-                </ul>
-            </div>
-            <div class="chapter">
-                <h3><i class="fas fa-brain"></i> Course 11: Computational Neuroscience</h3>
-                <ul>
-                    <li><i class="fas fa- "></i> Coming soon</li>
-                </ul>
-            </div>
-            <div class="chapter">
-                <h3><i class="fas fa-brain"></i> Course 12: Computational Medicine</h3>
-                <ul>
-                    <li><i class="fas fa- "></i> Coming soon</li>
-                </ul>
-            </div>
-            <div class="chapter">
-                <h3><i class="fas fa-brain"></i> Course 12: Bayesian Statistics </h3>
-                <ul>
-                    <li><i class="fas fa- "></i> Coming soon</li>
-                </ul>
-            </div>
-            <div class="chapter">
-                <h3><i class="fas fa-brain"></i> Course 12:  Mathematics </h3>
-                <ul>
-                    <li><i class="fas fa- "></i> Coming soon</li>
-                </ul>
-            </div>
+
+        </div>
+        <div class="chapter">
+            <h3><i class="fas fa-brain"></i> Course 5: EEG And Medical Time Series Analysis</h3>
+            <ul>
+                <li><i class="fas fa- "></i> Coming soon</li>
+            </ul>
+        </div>
+        <div class="chapter">
+            <h3><i class="fas fa-brain"></i> Course 6: Medical Image Analysis</h3>
+            <ul>
+                <li><i class="fas fa- "></i> Coming soon</li>
+            </ul>
+        </div>
+        <div class="chapter">
+            <h3><i class="fas fa-brain"></i> Course 7: Clinical Research Methodology</h3>
+            <ul>
+                <li><i class="fas fa- "></i> Coming soon</li>
+            </ul>
+        </div>
+        <div class="chapter">
+            <h3><i class="fas fa-brain"></i> Course 8: Scientific Writing</h3>
+            <ul>
+                <li><i class="fas fa- "></i> Coming soon</li>
+            </ul>
+        </div>
+        <div class="chapter">
+            <h3><i class="fas fa-brain"></i> Course 9: Study Protocol and Fund Proposal</h3>
+            <ul>
+                <li><i class="fas fa- "></i> Coming soon</li>
+            </ul>
+        </div>
+        <div class="chapter">
+            <h3><i class="fas fa-brain"></i> Course 10: Meta-Analysis</h3>
+            <ul>
+                <li><i class="fas fa- "></i> Coming soon</li>
+            </ul>
+        </div>
+        <div class="chapter">
+            <h3><i class="fas fa-brain"></i> Course 11: Computational Neuroscience</h3>
+            <ul>
+                <li><i class="fas fa- "></i> Coming soon</li>
+            </ul>
+        </div>
+        <div class="chapter">
+            <h3><i class="fas fa-brain"></i> Course 12: Computational Medicine</h3>
+            <ul>
+                <li><i class="fas fa- "></i> Coming soon</li>
+            </ul>
+        </div>
+        <div class="chapter">
+            <h3><i class="fas fa-brain"></i> Course 12: Bayesian Statistics </h3>
+            <ul>
+                <li><i class="fas fa- "></i> Coming soon</li>
+            </ul>
+        </div>
+        <div class="chapter">
+            <h3><i class="fas fa-brain"></i> Course 12:  Mathematics </h3>
+            <ul>
+                <li><i class="fas fa- "></i> Coming soon</li>
+            </ul>
+        </div>
         </section>
 
         <section id="instructor" class="instructor">
@@ -249,7 +501,7 @@
             <p>Join us for an immersive learning experience that will revolutionize your approach to data analysis in research.</p>
             <div class="enrollment-options">
                 <div class="enrollment-option">
-                    <h3>Course 1: R and Data Analysis - $50</h3>
+                    <h3>Course 1: R Programming and Data Analysis Fundamentals - $50</h3>
                     <p class="description">A comprehensive introduction to R and fundamental data analysis techniques.</p>
                     <div class="payment-buttons">
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJyEHNJGIstRzPvrrJttxIEE9AxFpAhn-55I02ePn6mEI8lQ/viewform?usp=sf_link" class="cta-button">Enroll Now</a>
@@ -509,7 +761,7 @@
             "hasCourseInstance": [
               {
                 "@type": "CourseInstance",
-                "name": "R And Data Analysis",
+                "name": "R Programming and Data Analysis Fundamentals",
                 "courseMode": "online",
                 "description": "Introduction to R programming, data engineering, statistical analysis, and clinical databases."
               },
